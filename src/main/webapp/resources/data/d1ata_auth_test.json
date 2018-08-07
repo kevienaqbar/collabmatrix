@@ -1,0 +1,118 @@
+{
+  "datejson": "2018-05-17 20:41:36.687",
+  "nodes": [
+    {
+      "name": "Kamtono"
+    },
+    {
+      "name": "Praptisih"
+    },
+    {
+      "name": "Basyar, M. Hamdan"
+    },
+    {
+      "name": "Sihbudi, Riza"
+    },
+    {
+      "name": "Samego, Indria"
+    },
+    {
+      "name": "Yanuarti, Sri"
+    },
+    {
+      "name": "Widiyanto, Kristiawan"
+    },
+    {
+      "name": "Winduhutomo, Sueno"
+    },
+    {
+      "name": "Sitohang, Japanton"
+    },
+    {
+      "name": "Sumantri, Juke"
+    },
+    {
+      "name": "Anwar, Dewi Fortuna"
+    },
+    {
+      "name": "Bhakti, Ikrar Nusa"
+    },
+    {
+      "name": "Sarah, Dwi"
+    },
+    {
+      "name": "Soebowo, Eko"
+    },
+    {
+      "name": "Puswanto, Eko"
+    },
+    {
+      "name": "Inayati, Ratna Shofi"
+    },
+    {
+      "name": "Irewati, Awani"
+    }
+  ],
+  "links": [
+    {
+      "source": 0,
+      "target": 1,
+      "value": 21,
+      "keyword": "TOC {7} | batuan induk {4} | hidrokarbon {3} | batulempung {3} | Hidrokarbon {3} | HI {2} | Formasi Jatiluhur {2} | Batulempung {2} | Batuan Induk {2} | Karawang {2} | fasies {2} | Formasi Cinambo {2} | Tmaks {1} | Sukabumi {1} | anamali gayaberat {1} | claystone {1} | turbidit {1} | anomali sisa {1} | porositas {1} | Jatiluhur Formation {1} | Batuan karbonat {1} | sistem submarine fan {1} | Bogor {1} | lingkungan {1} | hydrocarbon {1} | source rock {1} | Batuan Sumber {1} | batu lempung {1} | Formasi Batuasih {1} | perangkap hidrokarbon {1} | model 2-D {1} | Batu Lempung {1} | Formasi Halang {1} | "
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "value": 20,
+      "keyword": ""
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "value": 19,
+      "keyword": ""
+    },
+    {
+      "source": 6,
+      "target": 7,
+      "value": 19,
+      "keyword": "Karangsambung {6} | Longsoran {5} | NDVI {4} | geologi teknik {3} | Limpasan {2} | meander {2} | AHP {2} | curah hujan {2} | Sungai Lukulo {2} | geoteknik {2} | Penginderaan jauh {2} | sifat kembang-susut {2} | Airtanah {2} | Gerakan tanah {2} | Luk Ulo {2} | SIG {2} | embung {2} | konservasi {2} | DAS Grompol {2} | penambangan pasir {2} | Konservasi {1} | karangsambung {1} | longsor {1} | karangambung {1} | model {1} | mitigasi bencana {1} | Karangsambung Satuan Genetika Wilayah {1} | TPA Kaligending {1} | Longsor {1} | kebumen {1} | Karangambung {1} | faktor pengontrol {1} | Geoteknik {1} | Air tanah {1} | "
+    },
+    {
+      "source": 8,
+      "target": 9,
+      "value": 18,
+      "keyword": ""
+    },
+    {
+      "source": 10,
+      "target": 11,
+      "value": 18,
+      "keyword": ""
+    },
+    {
+      "source": 12,
+      "target": 13,
+      "value": 18,
+      "keyword": "geologi teknik {2} | amblesan tanah {2} | bahaya likuifaksi {2} | cekungan alluvial {1} | Investigasi Geoteknik {1} | CPT {1} | biaya ekonomis {1} | Opak Fault {1} | Likuifaksi {1} | dataran aluvial {1} | kerusakan fisik {1} | Semarang {1} | Amblesan Tanah {1} | gempa bumi {1} | penurunan tanah {1} | Earthquake {1} | dataran alluvial {1} | Penurunan {1} | Tanah Longsor {1} | Faktor {1} | Penyebab {1} | Patahan Opak {1} | amblesan {1} | Kestabilan Lereng {1} | penurunan {1} | Liquefaction {1} | gempabumi {1} | Kontribusi {1} | Cut Slope Chart {1} | kota Semarang {1} | Kota Semarang {1} | lempung kembang kerut {1} | Gempabumi {1} | Badan Jalan {1} | penampang bawah permukaan {1} | Analysis {1} | Investigation {1} | Geotechnical {1} | lempung {1} | "
+    },
+    {
+      "source": 14,
+      "target": 6,
+      "value": 18,
+      "keyword": "Karangsambung {6} | Longsoran {5} | NDVI {4} | geologi teknik {3} | Limpasan {2} | meander {2} | AHP {2} | curah hujan {2} | Sungai Lukulo {2} | geoteknik {2} | Penginderaan jauh {2} | sifat kembang-susut {2} | Airtanah {2} | Gerakan tanah {2} | Luk Ulo {2} | SIG {2} | embung {2} | konservasi {2} | DAS Grompol {2} | penambangan pasir {2} | Konservasi {1} | karangsambung {1} | longsor {1} | karangambung {1} | model {1} | mitigasi bencana {1} | Karangsambung Satuan Genetika Wilayah {1} | TPA Kaligending {1} | Longsor {1} | kebumen {1} | Karangambung {1} | faktor pengontrol {1} | Geoteknik {1} | Air tanah {1} | "
+    },
+    {
+      "source": 14,
+      "target": 7,
+      "value": 18,
+      "keyword": "Karangsambung {6} | Longsoran {5} | NDVI {4} | geologi teknik {3} | Limpasan {2} | meander {2} | AHP {2} | curah hujan {2} | Sungai Lukulo {2} | geoteknik {2} | Penginderaan jauh {2} | sifat kembang-susut {2} | Airtanah {2} | Gerakan tanah {2} | Luk Ulo {2} | SIG {2} | embung {2} | konservasi {2} | DAS Grompol {2} | penambangan pasir {2} | Konservasi {1} | karangsambung {1} | longsor {1} | karangambung {1} | model {1} | mitigasi bencana {1} | Karangsambung Satuan Genetika Wilayah {1} | TPA Kaligending {1} | Longsor {1} | kebumen {1} | Karangambung {1} | faktor pengontrol {1} | Geoteknik {1} | Air tanah {1} | "
+    },
+    {
+      "source": 15,
+      "target": 16,
+      "value": 17,
+      "keyword": ""
+    }
+  ]
+}

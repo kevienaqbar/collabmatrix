@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <f:metadata>
+        <f:viewAction action="#{CompareDateTime.Compare}" />
+        <!--        <<f:viewAction action="" />
+                <f:viewAction action="" />-->
+
+    </f:metadata>
+
+    <h:head>
+
+        <title>
+            Matriks Kolaborasi Penulis &amp; Afiliasi Institusi
+        </title>
+
+        <h:outputScript library="lib" name="d3.v3.js"/>
+        <h:outputScript library="lib" name="d3.parcoords.js"/>
+        <h:outputScript library="lib" name="science.v1.js"/>
+        <h:outputScript library="lib" name="tiny-queue.js"/>
+        <h:outputScript library="js" name="reorder.v1.js"/>
+        <h:outputScript library="js" name="matrix.js"/>
+        <h:outputStylesheet library="css" name="style.css"/>
+
+    </h:head>
+    <h:body>
+
+        <h1>
+            <i>Collaboration</i> Matrix RIN
+        </h1>
+        <p>
+        </p>
+        <section class="container">
+            <div id="right" class="right-half">
+                <br />
+                <br />
+                <br />
+                <!--Util.datenow-->
+                <!--                <h:outputText  value="" />   -->
+                <br />
+                <br />
+                <h3>
+                    Content of Relations :
+                </h3>
+                <select id="json_sources" name="json_sources" onchange="order.value = 'name';">
+                    <option value="./resources/data/d1ata_auth_test.json" selected="selected">
+                        Based on Author
+                    </option>
+                    <option value="./resources/data/d1ata_aff_test.json">
+                        Based on Affiliation
+                    </option></select>
+                <!--                 <input type="radio" name="a" onclick="displayResult(this.value)"
+                                       value="Author" />Author <br /> 
+                                 <input type="radio" name="b"
+                                       onclick="displayResult(this.value)" value="Affiliation" />Affiliation <br /><br />-->
+                <br />
+                <p>
+                </p>
+                <h3>
+                    Order by :
+                </h3>
+                <select id="order">
+                    <option value="name">
+                        Name
+                    </option>
+                    <option value="freq">
+                        Frequency
+                    </option>
+                    <option value="count">
+                        Count
+                    </option>
+                    <option value="leafOrder">
+                        LeafOrder
+                    </option>
+                </select>
+         
+   
+
+                <br /><br />
+                <p>
+                    Matriks Kolaborasi Penulis &amp; Afiliasi Institusi menunjukkan banyaknya
+                    keterhubungan serta relasi antar penulis atau lembaga dalam hal kolaborasi
+                    penyusunan suatu publikasi karya ilmiah.
+                </p>
+                <p>
+                    Disertai gabungan informasi kata kunci karya ilmiah dari semua kolaborasi yang dihasilkan bersama. <br /><br /><br />
+                </p>
+                <p>
+                    Pusat Dokumentasi dan Informasi Ilmiah
+                </p>
+                <p>
+                    LIPI 
+                </p>
+
+
+
+            </div>
+            <div id="left" class="left-half"> </div>
+
+        </section>
+
+        <!--        
+                <h:commandButton id="submitButton" 
+                                 value="Submit - US" action="">
+                </h:commandButton>-->
+
+
+
+        <!--<h:outputScript library="js" name="common.js" target="body" />-->
+
+        <!--<h:outputScript library="js" name="intijs.js" target="body" />-->
+
+        <!--     <div id="svgContainer"></div>-->
+
+
+        <script type="text/javascript">
+//            document.write('ATesting');
+
+//            d3.select("#svgContainer").append("svg").attr("width", 50).attr("height", 50).append("circle").attr("cx", 25).attr("cy", 25).attr("r", 25).style("fill", "blue");
+
+
+            var margin = {top: 130, right: 0, bottom: 10, left: 300},
+                    width = 720,
+                    height = 720;
+
+            var x = d3.scale.ordinal().rangeBands([0, width]),
+                    z = d3.scale.linear().domain([0, 4]).clamp(true),
+                    c = d3.scale.category10().domain(d3.range(10));
+
+            var svg = d3.select("#left").append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                    .style("margin-left", -margin.left + "px")
+                    .append("g")
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+//
+//
+            var change = function () {
+
+                svg.selectAll("*").remove();
+                svg.attr("width", width + margin.left + margin.right)
+                        .attr("height", height + margin.top + margin.bottom)
+                        .style("margin-left", -margin.left + "px")
+                        .append("g")
+                        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+                var source = dropdown.node().options[dropdown.node().selectedIndex].value;
+                setTimeout(function () {
+                    d3.json(source, loadJson)
+                }, 1300);
+//                d3.json(source, loadJson);
+//                    d3.json("data_aff_test.json", loadJson);
+            };
+
+            var dropdown = d3.select("#json_sources");
+            dropdown.on("change", change);
+            change(); //trigger json on load
+
+//            document.write(' ZTesting');
+        </script>
+
+    </h:body>
+
+</html>

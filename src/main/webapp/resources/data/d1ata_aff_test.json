@@ -1,0 +1,109 @@
+{
+  "datejson": "2018-05-17 20:41:36.687",
+  "nodes": [
+    {
+      "name": "Pusat Penelitian Biologi"
+    },
+    {
+      "name": "Pusat Penelitian Bioteknologi"
+    },
+    {
+      "name": "Pusat Penelitian Oseanografi"
+    },
+    {
+      "name": "The University of Tokyo"
+    },
+    {
+      "name": "Pusat Penelitian Laut Dalam"
+    },
+    {
+      "name": "Institut Pertanian Bogor"
+    },
+    {
+      "name": "Loka Uji Teknik Penambangan dan Mitigasi Bencana"
+    },
+    {
+      "name": "Pusat Penelitian Geoteknologi"
+    },
+    {
+      "name": "Loka Alih Teknologi Penyehatan Danau"
+    },
+    {
+      "name": "Pusat Penelitian Limnologi"
+    },
+    {
+      "name": "Balai Penelitian Teknologi Mineral"
+    },
+    {
+      "name": "Pusat Penelitian Metalurgi dan Material"
+    },
+    {
+      "name": "Pusat Penelitian Fisika"
+    },
+    {
+      "name": "Institut Teknologi Bandung"
+    }
+  ],
+  "links": [
+    {
+      "source": 0,
+      "target": 1,
+      "value": 18,
+      "keyword": "Sumba Ongole {3} | Growth hormone {2} | Lactic acid bacteria {1} | Growth {1} | Lycopersicon Esculentum {1} | Curcuma heyneana {1} | Methanothoph {1} | Nycticebus Coucang {1} | Agrobacterium tumefaciens {1} | induksi mutasi {1} | Implementasi Teknologi {1} | induksi poliploid {1} | Walang sangit {1} | trees {1} | atraktan {1} | Carcass {1} | Association {1} | 16S rDNA {1} | safety {1} | Bos indicus {1} | Endophytic bacteria {1} | growth hormone {1} | Nycticebus Javanicus {1} | Digestibility {1} | Consumption {1} | Sayur Asin {1} | karkas {1} | transformasi genetik {1} | Novel SNP {1} | Nitrogen-fixing activity {1} | Feed Utilization {1} | asosiasi {1} | padi gogo {1} | Grass Compost {1} | pertumbuhan {1} | East Java {1} | Leptocorisa spp. {1} | Paddy soil {1} | Seedling Growth Analysis {1} | Pusbindiklat Peneliti-LIPI {1} | Spent Mushroom Compost (SMC) {1} | TP Banyumulek NTB {1} | Phosphate solubilizing microorganism {1} | Model {1} | Sayuran Organik {1} | Talas {1} | Population diversity {1} | umpan bau {1} | "
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "value": 17,
+      "keyword": "Leptocephali {4} | Indian Ocean {3} | Anguilla marmorata {2} | Anguilla {2} | Eels {2} | Otolith {2} | Sulawesi Island {1} | sidat {1} | heavy metals {1} | migrasi menghilir {1} | Spawning area {1} | Migration {1} | Freshwater eels {1} | Biodiversity {1} | Celebes sea {1} | Marine eels {1} | Recruitment {1} | Kuroshio Current {1} | Seasonal spawning {1} | metamorphosis {1} | leptocephalusx {1} | Spawning {1} | ALC mark {1} | Tropical eel {1} | Daily ring {1} | Togian Islands {1} | check {1} | Eel {1} | daily growth increments {1} | Distribution {1} | Eel larvae {1} | Mascarene Plateau {1} | sediments {1} | coastal waters {1} | Growth {1} | Sr: Ca ratios {1} | glass eel {1} | otolith {1} | Tomini Bay {1} | fluktuasi muka air {1} | Marine Eels {1} | Larval transport {1} | Metamorphosis {1} | Ocean currents {1} | biota {1} | Daily increment {1} | Species assemblages {1} | Danau Poso {1} | East China Sea {1} | Leptocephalus {1} | leptocephalus {1} | Larval migration {1} | Indonesian Seas {1} | Indonesia {1} | "
+    },
+    {
+      "source": 4,
+      "target": 2,
+      "value": 16,
+      "keyword": "Ambon Bay {2} | Temperature {1} | Weda bay {1} | Komunitas {1} | Waters Quality {1} | Maluku {1} | Biodiversity {1} | Moluska {1} | SSLW {1} | Celebes sea {1} | Marine eels {1} | Papuan coasts-Arafura exchange process {1} | Teluk Ambon {1} | freshwater fraction model {1} | Tomini Bay {1} | Bivalvia {1} | Marine Pollution {1} | Struktur ukuran {1} | temperature {1} | oxygen {1} | nutrient enrichment {1} | salinity {1} | potential marine pollution {1} | Sediment {1} | Faktor kondisi {1} | Ikan terbang {1} | Leptocephali {1} | Togian Islands {1} | rumpon {1} | Banda-Arafura Seas exchange process {1} | Stress {1} | Salinity {1} | Indonesia timur {1} | Heavy Metals {1} | purse seine {1} | Mercury {1} | strategi penempatan rumpon {1} | "
+    },
+    {
+      "source": 5,
+      "target": 0,
+      "value": 16,
+      "keyword": "Annona muricata L. {2} | endophytic fungi {2} | taro fermentation {1} | pullulanase {1} | habitat preferences {1} | cell suspension culture {1} | WiDr {1} | pati resisten {1} | callus induction {1} | karakter pendiagnosis {1} | identification {1} | molt {1} | degree of polymerization {1} | Lactobacillus plantarum B123 indigenos {1} | bahan pangan {1} | rat {1} | moon phases {1} | Pulau Simalur {1} | pollination {1} | Morphometric {1} | West Java Indonesia {1} | West Java {1} | GC-MS {1} | pollen viability {1} | breast tumor {1} | prebiotik {1} | Stachyris melanothorax {1} | fruit set {1} | lintnerisasi {1} | Fusarium diversity {1} | Soursop leaves {1} | genetic diversity {1} | isolasi geografis {1} | morfo-spesies {1} | RAPD {1} | ?-Galaktosidase {1} | distribution {1} | amylase {1} | purifikasi {1} | hidrolisis laktosa {1} | plant growth regulator {1} | metabolite {1} | Chang {1} | foraging activity {1} | susu UHT {1} | Fruit bats {1} | phylogenetic study {1} | Aquilaria malaccensis {1} | lactic acid bacteria {1} | pemanasan bertekanan-pendinginan {1} | cancer {1} | pululanase {1} | "
+    },
+    {
+      "source": 6,
+      "target": 7,
+      "value": 14,
+      "keyword": "pemodelan kestabilan lereng {2} | Subang {2} | longsoran {2} | kebun teh {1} | Pulau Simeulue {1} | CPT {1} | sesar anjak {1} | kompleks subduksi {1} | Respon Spektra {1} | kesesuaian lahan {1} | kinematika {1} | tanah lempung {1} | jalur lintas barat Liwa - Bukit Kemuning {1} | jalur transek Liwa-Ranau {1} | simulasi numerik {1} | Erosi {1} | jalur lintas barat Liwa - Krui {1} | pemodelan hidrologi {1} | Dataran Tinggi Dieng {1} | Discreet Point {1} | sesar mendatar {1} | jenis tanah {1} | Kumering {1} | Tanah {1} | Menanga {1} | kota Semarang {1} | Mikoriza {1} | subgrup {1} | SIG {1} | fasies sedimen Kuarter {1} | SPKGUBG\u0026NG 2010 {1} | SRTM30 {1} | pola kurva {1} | kompleks melange {1} | lempung {1} | RUSLE {1} | prisma akresi {1} | segmen sesar {1} | Rancaekek {1} | penurunan tanah {1} | Natrium {1} | mud diapir {1} | Sesar Sumatra {1} | pemodelan {1} | offset sesar {1} | Komplek Gunungkasih {1} | Sesar naik {1} | Lampung Barat {1} | klasifikasi {1} | tuf pasiran {1} | "
+    },
+    {
+      "source": 5,
+      "target": 2,
+      "value": 13,
+      "keyword": "Cd {2} | kontaminasi {2} | Kepulauan Seribu {2} | Pb {2} | bioremediation {1} | optimal {1} | Tambelan {1} | mercury {1} | demersal {1} | deteksi perubahan {1} | Arlindo {1} | Pari Island {1} | habitat terumbu karang {1} | oil {1} | Mangrove {1} | Jakarta Bay {1} | citra Landsat {1} | klasifikasi hibrida {1} | Bacteria {1} | heavy metal {1} | korelasi {1} | budidaya {1} | Molecular Taxonomy {1} | COI {1} | difusivitas vertikal {1} | Selat Alor {1} | green mussel culture {1} | New Species {1} | pollutant trap {1} | Himantura Leoparda {1} | percampuran turbulen {1} | Landsat {1} | bioaccumulation {1} | Sungai Kembung {1} | Sonneratia alba {1} | bandeng {1} | monitoring {1} | Riau Archipelago {1} | fertilizer {1} | Cytochrome b {1} | fish {1} | kapak-kapak {1} | Princeton Ocean Model {1} | pulau Morotai {1} | Natuna Sea {1} | coastal {1} | Indonesia {1} | "
+    },
+    {
+      "source": 8,
+      "target": 9,
+      "value": 13,
+      "keyword": "TSI Carlson’s {2} | Perairan {2} | Fauna makrobentik {1} | Kesuburan {1} | In situ {1} | Kebiasaan makan fungsional {1} | Sungai Cikaniki {1} | Tingkat Kesuburan {1} | Danau Toba {1} | Collector gatherer {1} | Danau {1} | Diatas-Dibawah {1} | Pencemaran {1} | Sungai Cisadane {1} | Batur {1} | S. Cikaniki {1} | Perifiton {1} | danau {1} | Indek Kirchoff {1} | Waduk Karangkates {1} | kelimpahan {1} | bahan or {1} | komposisi {1} | Klasifikasi {1} | DAS Ciliwung {1} | Shredder {1} | Merkuri {1} | bakteri heterotrofik {1} | Predator sedimen {1} | Bioakumulasi {1} | Logam merkuri {1} | kualitas air {1} | indek kumulatif biotik {1} | Antropogenik {1} | Sedimen {1} | sentani {1} | Danau Singkarak {1} | Temporal {1} | Spasial {1} | Srapper {1} | fitoplankton {1} | Sungai Cikini {1} | Microcystis aeruginosa {1} | Multimetrik {1} | Tingkat {1} | fauna makrobentik {1} | Fitoplankton {1} | Collector filterer {1} | Status kontaminasi {1} | mekuri {1} | Singkarak {1} | "
+    },
+    {
+      "source": 10,
+      "target": 11,
+      "value": 11,
+      "keyword": "Molases {2} | Pelindian {2} | Bijih mangan {2} | Pellet {1} | Energi aktivasi {1} | Fine Coal {1} | Lance {1} | Nikel Pig Iron {1} | Ekstraksi {1} | Pencucian {1} | Besi sponge {1} | Bijih {1} | Binder {1} | Briket {1} | Kadar rendah {1} | Baja Paduan Nikel {1} | Bentonit {1} | Flotasi {1} | Add value {1} | Bijih besi 3 {1} | Ferromanganese {1} | Kinetika {1} | Aglomerasi {1} | Aci {1} | Iron ore {1} | Asam oksalat {1} | Blast furnace {1} | Konverter {1} | Mangan {1} | Column leaching {1} | Pig iron {1} | SCM {1} | Pelindian reduktif {1} | "
+    },
+    {
+      "source": 12,
+      "target": 7,
+      "value": 9,
+      "keyword": "Pulau Simeulue {2} | deterministik {1} | Polarization Direction {1} | mud diapir {1} | prisma akresi {1} | H/V Spectral Ratio {1} | Shear Wave Splitting {1} | sesar anjak {1} | Delay Time {1} | percepatan tanah puncak {1} | Site Response {1} | kompleks subduksi {1} | Ambient Noise {1} | Fundamental Frequency {1} | gempa bumi {1} | Sunda-Banda Arc Transition Zone {1} | Seismic Anisotropy {1} | Amplification Factor {1} | kompleks melange {1} | Simeulue Island {1} | Receiver Function {1} | Crustal Structure {1} | Banda Arc-Continent Collision {1} | "
+    },
+    {
+      "source": 13,
+      "target": 7,
+      "value": 8,
+      "keyword": "balneology {1} | ENSO {1} | Ambon Bay {1} | CPT {1} | organic component {1} | direct use {1} | Depositional environment {1} | fasies sedimen Kuarter {1} | grain size {1} | SSS {1} | monsoon {1} | catalyst {1} | SST {1} | sediment dynamics {1} | hot springs {1} | Tarakan {1} | pola kurva {1} | hot compressed water {1} | public acceptance {1} | facies {1} | multivariate statistical analysis {1} | Indonesia {1} | IOD {1} | "
+    }
+  ]
+}
