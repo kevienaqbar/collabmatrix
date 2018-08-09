@@ -40,20 +40,15 @@ import java.util.Set;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-
-
 /**
  *
  * @author Kevien Aqbar
  */
-
 @ManagedBean(name = "user")
 @SessionScoped
 public class InitCollaboration implements Serializable {
-    
+
     public static Timestamp lastexportimedb = Timestamp.valueOf("2000-01-01 00:01:01.0");
-
-
 
 //    public static void main(String[] args) {
     public void AuthorKeyword(Timestamp lastexportimedb) {
@@ -70,10 +65,8 @@ public class InitCollaboration implements Serializable {
         ArrayList<Integer> valuelisttampil = new ArrayList<Integer>();
         ArrayList<String> keywordlisttampil = new ArrayList<String>();
         ArrayList<String> keywordlisttampilfix = new ArrayList<String>();
-        
-        
-        
-                //Deklarasi arraylist utama yang akan bertambah terus nilainya
+
+        //Deklarasi arraylist utama yang akan bertambah terus nilainya
         ArrayList<String> arrCombAff = new ArrayList<String>();
         ArrayList<Integer> arrCombAffVal = new ArrayList<Integer>();
         ArrayList<String> arrCombAffKey = new ArrayList<String>();
@@ -85,15 +78,12 @@ public class InitCollaboration implements Serializable {
         ArrayList<String> keywordlisttampilAff = new ArrayList<String>();
         ArrayList<String> keywordlisttampilfixAff = new ArrayList<String>();
 
-        System.out.println("INI TETAP jalan kok tanpa koneksi ke jdbc !");
-
+        System.out.println("INI BERJALAN !");
 
         Connection connection;
         Statement statement;
         ResultSet resultSet;
 
-        //
-        //
         String queryAut_Key_Aff_Trim = "SELECT t_auth.dataset_id, t_auth.author, t_aff.affiliation, t_auth.keyword\n"
                 + "FROM (\n"
                 + "\n"
@@ -280,35 +270,28 @@ public class InitCollaboration implements Serializable {
         }
 
         try {
-            String URL = "jdbc:postgresql://localhost:5432/rin_lipi.sqlnew";
-            String USER = "postgres";
-            String PASS = "root";
+//            String URL = "jdbc:postgresql://localhost:5432/rin_lipi.sqlnew";
+//            String USER = "postgres";
+//            String PASS = "root";
+            String URL = "jdbc:postgresql://127.0.0.1:5432/rin_lipi";
+            String USER = "dvndb";
+            String PASS = "pd11l1p12016";
             Connection conn = DriverManager.getConnection(URL, USER, PASS);
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(queryAut_Key_Aff_Trim);
             while (rs.next()) {
-//               System.out.println(rs.getString(1));
-
                 String dataset_id = rs.getString("dataset_id");
                 String authors = rs.getString("author");
-//               String keyword = resultSet.getString("keyword");
                 String affiliations = rs.getString("affiliation");
-//                String author = rs.getString("affiliation");
                 String keywords = rs.getString("keyword");
 
 //                System.out.println("*\nID       : "+dataset_id+ "\nPenulis  : "+authors+ "\nAfiliasi : "+affiliation+ "\nKeyword  : " + keyword);
-//                System.out.println("ID     : "+dataset_id);
                 if (keywords == null) {
                     keywords = ""; //Ganti agar nilai keyword yg kosong tidak null
                 }
 
                 String[] arrAuthors = authors.trim().split("\\s*;\\s*");
                 String[] arrAffiliations = affiliations.trim().split("\\s*;\\s*");
-//                List<String> items = Arrays.asList(authors.trim().split("\\s*;\\s*"));  //Pisahkan author berdasarkan semicolon dan simpan menjadi arrAuthor (idx0,idx1,idx2,...)
-//                //Selain Java8
-//                String[] arrAuthor = items.toArray(new String[0]); // Convert List<String> menjadi String[]
-//                System.out.println("\nAmbil :-" + stringArray[1] + "-\n");
-//                 System.out.println("Tokenisasi Frasa :\n" + arrAuthors[0] +"\n");
 //                int k=0; //Tokenisasi Frasa
 //                for( String x : arrAuthors){
 //                    k++;
@@ -327,30 +310,17 @@ public class InitCollaboration implements Serializable {
             es.printStackTrace();
         }
 
-        //         ArrayList<String> str = new ArrayList<String>();
-//         str = Arrays.asList(str)
-//        String str = "Aqbar, Kevien;Teharudin, Ridwan;Algani, Thomi";
-//        List<String> items = Arrays.asList(str.split("\\s*;\\s*"));
-//        System.out.println(items.get(1));
-//      
-//        //Java8
-//        String[] myArray = items.stream().toArray(String[]::new);
-//        System.out.println(myArray[2]);
-//        
-//        //Selain Java8
-//        String[] stringArray = items.toArray(new String[0]);
-//        System.out.println(stringArray[0]);
-        int conval = 0; 
-        for (int i = 0; i < arrComb.size(); i++) {  //Cetak kombinasi yang di dapat
-//        for (int i = 16000; i < 16930; i++) {
-//            System.out.println("Idx-" + i + " : " + arrComb.get(i)); //***BUKA
-            if(arrComb.get(i).contains("Praptisih")){
-                conval = conval+arrCombVal.get(i);
-                System.out.println("Contains  'Praptisih' Idx-" +i+ "Jml di Idx: " +arrCombVal.get(i)+ " Jumlah : "+conval);
-            }
-        }
+        int conval = 0;
+//        for (int i = 0; i < arrComb.size(); i++) {  //Cetak kombinasi yang di dapat
+////        for (int i = 16000; i < 16930; i++) {
+////            System.out.println("Idx-" + i + " : " + arrComb.get(i)); //***BUKA
+//            if (arrComb.get(i).contains("Praptisih")) {
+//                conval = conval + arrCombVal.get(i);
+//                System.out.println("Contains  'Praptisih' Idx-" + i + "Jml di Idx: " + arrCombVal.get(i) + " Jumlah : " + conval);
+//            }
+//        }
         System.out.println("\n");
-//            Collections.sort(arrlistJml); Tetapi index arraynya tidak ikut ke sort (tdk ikut berubah)
+//        Collections.sort(arrlistJml); Tetapi index arraynya tidak ikut ke sort (tdk ikut berubah)
 //        for (int i = 0; i < arrCombVal.size(); i++) { //Cetak nilai yang didapat
 //        for (int i = 16000; i < 16930; i++) {
 //            System.out.println("Val Idx-" + i + " : " + arrCombVal.get(i)); //***BUKA
@@ -359,11 +329,6 @@ public class InitCollaboration implements Serializable {
 //        for (int i = 0; i < arrCombKey.size(); i++) {
 //            System.out.println("Keyword ke-" + i + " : " + arrCombKey);
 //        }
-
-
-
-//        String[] stringArray = items.toArray(new String[0]);
-//        System.out.println(stringArray[0]);
         for (int i = 0; i < arrCombAff.size(); i++) {  //Cetak kombinasi yang di dapat
             System.out.println("IdxAff-" + i + " : " + arrCombAff.get(i)); //***BUKA
         }
@@ -377,8 +342,6 @@ public class InitCollaboration implements Serializable {
 //            System.out.println("Keyword ke-" + i + " : " + arrlistKeyword);
 //        }
 
-
-
 //
 //
 //
@@ -386,36 +349,13 @@ public class InitCollaboration implements Serializable {
 ////////////////////////////////////////////////////////////////////////////////
 //Tagging-Sorting-Filter 10 kolaborasi-Sublist-Persiapan Node dan Link json
 //
-         TaggingSortFilter tsf = new TaggingSortFilter();
-         tsf.setData(arrComb, arrCombVal, arrCombKey, authortampil, sourcelisttampil, targetlisttampil, valuelisttampil, keywordlisttampil);
-         
-         TaggingSortFilter tsfAff = new TaggingSortFilter();
-         tsfAff.setData(arrCombAff, arrCombAffVal, arrCombAffKey, affiliationtampilAff, sourcelisttampilAff, targetlisttampilAff, valuelisttampilAff, keywordlisttampilAff);
+        TaggingSortFilter tsf = new TaggingSortFilter();
+        tsf.setData(arrComb, arrCombVal, arrCombKey, authortampil, sourcelisttampil, targetlisttampil, valuelisttampil, keywordlisttampil);
 
-//        // Init the element list
-//        List<Element> elements = new ArrayList<Element>();
-//        for (int i = 0; i < arrCombVal.size(); i++) {
-//            elements.add(new Element(i, arrCombVal.get(i))); //Buat elemen list sebanyak arrCombVal, indexnya, sama valuenya di tagging
-//        }
-//
-//        // Sort and print
-////        Collections.sort(elements); //Urutkan list elements, default ASC
-////        Collections.reverse(elements); // Membalikkan urutan, jadi yang nilai besar pertama (DESC)
-////        /* Sorting in decreasing order*/
-//        Collections.sort(elements, Collections.reverseOrder());
-//
-//        // Sublist to List
-//        List<Element> filter = new ArrayList<Element>(elements.subList(0, 10)); //Membatasi hanya 10 data teratas
-//        System.out.println("\nHasil Limit 10  teratas");
-//        System.out.println("NilDESC - IdxBef");
-//        for (Element element : filter) {
-//             //System.out.println(element.value + "      -  " + element.index);  //###BUKA
-//            System.out.println("Value : "+ element.value + " || Idx-" + element.index);  //###BUKA
-//            //Jalankan Method getConvert (persiapan data json. Rubah array ke node dan link
-//            PreArrToJSON preArrToJSON = new PreArrToJSON();
-//            preArrToJSON.getConvert(element.value, element.index, arrComb, arrCombKey,
-//                    authortampil, sourcelisttampil, targetlisttampil, valuelisttampil, keywordlisttampil);
-//        }
+        TaggingSortFilter tsfAff = new TaggingSortFilter();
+        tsfAff.setData(arrCombAff, arrCombAffVal, arrCombAffKey, affiliationtampilAff, sourcelisttampilAff, targetlisttampilAff, valuelisttampilAff, keywordlisttampilAff);
+
+
 //
 //
 ////////////////////////////////////////////////////////////////////////////////     
@@ -433,23 +373,22 @@ public class InitCollaboration implements Serializable {
         }
         //Cetak Node (Source, Target, Value) yang akan tampil di matriks
 //        System.out.println("\nSource   = " + String.valueOf(sourcelisttampil) + "\nTarget   = " + String.valueOf(targetlisttampil) + "\nValue    = " + String.valueOf(valuelisttampil));
-        for (int x : sourcelisttampil){
+        for (int x : sourcelisttampil) {
             System.out.println("Source : " + String.valueOf(x));
         }
-        for (int x : targetlisttampil){
+        for (int x : targetlisttampil) {
             System.out.println("Target : " + String.valueOf(x));
         }
-        for (int x : valuelisttampil){
+        for (int x : valuelisttampil) {
             System.out.println("Value : " + String.valueOf(x));
         }
-        
-        
+
         //Cetak Keyword yang akan tampil di matriks
 //        System.out.println("Keyword  = " + keywordlisttampil);
-        for (String x : keywordlisttampil){
+        for (String x : keywordlisttampil) {
             System.out.println("Keyword : " + String.valueOf(x));
         }
-        
+
 //
 //
         //Cetak Node Name Affiliation yang akan tampil di matriks
@@ -462,22 +401,20 @@ public class InitCollaboration implements Serializable {
         }
         //Cetak Node (Source, Target, Value) yang akan tampil di matriks
 //        System.out.println("\nSource   = " + String.valueOf(sourcelisttampilAff) + "\nTarget   = " + String.valueOf(targetlisttampilAff) + "\nValue    = " + String.valueOf(valuelisttampilAff));
-        for (int x : sourcelisttampilAff){
+        for (int x : sourcelisttampilAff) {
             System.out.println("Source : " + String.valueOf(x));
         }
-        for (int x : targetlisttampilAff){
+        for (int x : targetlisttampilAff) {
             System.out.println("Target : " + String.valueOf(x));
         }
-        for (int x : valuelisttampilAff){
+        for (int x : valuelisttampilAff) {
             System.out.println("Value : " + String.valueOf(x));
         }
         //Cetak Keyword yang akan tampil di matriks
 //        System.out.println("Keyword  = " + keywordlisttampilAff);
-        for (String x : keywordlisttampilAff){
+        for (String x : keywordlisttampilAff) {
             System.out.println("Keyword : " + String.valueOf(x));
         }
-
-
 
 //
 //
@@ -494,8 +431,6 @@ public class InitCollaboration implements Serializable {
         //Cetak KeywordFix yang akan tampil di matriks
         System.out.println("KeywordF = " + keywordlisttampilfix);
         System.out.println("KeywordFAff = " + keywordlisttampilfixAff);
-        
-        //System.out.println("\nKeyword FIX 9 = " + keywordlisttampilfix.get(9));
 
         //Membuat file json
         ConvertJson cj = new ConvertJson();
@@ -512,10 +447,5 @@ public class InitCollaboration implements Serializable {
 //
 //
 ////////////////////////////////////////////////////////////////////////////////
-
 //
-   
-
-   
-
 }

@@ -53,18 +53,15 @@ public class CountSortKeyword {
                 }
             });
 
-            //Printing the repeated words in input file along with their occurrences
-//            System.out.println("\n-----------------------\nKeyword Per Value idx-" + (i));
-
             String kalimattmp = "";
 
-            for (Map.Entry<String, Integer> entry : list) {  //Cetak semua entrynya (BELUM dibatasi 10)
+            for (Map.Entry<String, Integer> entry : list) {  //Cetak semua entrynya
                 if (entry.getValue() >= 1) {
                     kalimattmp = kalimattmp + entry.getKey() + " {" + entry.getValue() + "} | "; //Gabung entrynya, jadi satu string    
                 }
             }
 //            int ij=0; //ij Sudah membatasi hanya 10 keyword saja
-//            for (Entry<String, Integer> entry : list) {  //Cetak semua entrynya (BELUM dibatasi 10)
+//            for (Entry<String, Integer> entry : list) {  //Cetak semua entrynya 
 //                if (entry.getValue() >= 1 && ij<10) {
 //                    kalimattmp = kalimattmp + entry.getKey() + " {" + entry.getValue() + "} | "; //Gabung entrynya, jadi satu string    
 //                }

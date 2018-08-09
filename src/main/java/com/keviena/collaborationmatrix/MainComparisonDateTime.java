@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Serializable;
 import java.sql.Connection;
@@ -23,6 +24,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -33,11 +36,10 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean(name = "CompareDateTime")
 @SessionScoped
 public class MainComparisonDateTime implements Serializable {
+
     static Timestamp lastexportimedb, datetimejson;
 
-    
     public void Compare() {
-//        public Date Compare() {
 
         try {
             Class.forName("org.postgresql.Driver");
@@ -46,40 +48,28 @@ public class MainComparisonDateTime implements Serializable {
         }
 
         try {
-            String URL = "jdbc:postgresql://localhost:5432/rin_lipi.sqlnew";
-            String USER = "postgres";
-            String PASS = "root";
+//            String URL = "jdbc:postgresql://localhost:5432/rin_lipi.sqlnew";
+//            String USER = "postgres";
+//            String PASS = "root";
+            String URL = "jdbc:postgresql://127.0.0.1:5432/rin_lipi";
+            String USER = "dvndb";
+            String PASS = "pd11l1p12016";
             Connection conn = DriverManager.getConnection(URL, USER, PASS);
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery("SELECT MAX(lastexporttime) FROM dataset");
             while (rs.next()) {
-//               if(rs.next()) {
                 lastexportimedb = rs.getTimestamp(1);
-
-////                //
-////                //Compare 2 timestamp
-////                if(mytime.after(fromtime) && mytime.before(totime))
-////                //mytime is in between
-//                System.out.println("Date pada Database : " + lastexportimedb);
-//                LocalDateTime expiredDate = lastexportimedb.toLocalDateTime();
-//                System.out.println("Var expiredDate : " + expiredDate);
-//                System.out.println("Date pada Computer : " + java.time.LocalDateTime.now());
 //                System.out.println("isBefore : " + LocalDateTime.now().isBefore(expiredDate)); //Apakah DateTime saat ini kurang dari DateTime pada db?
 //                System.out.println("isAfter : " + LocalDateTime.now().isAfter(expiredDate)); //Apakah DateTime pada lastexporttime (DB) lebih dari yg tercantum pada File .JSON ? --true : Maka lakukan pembaruan file JSON.
 //
-//                //Merubah dari date ke TimeStamps
-//                //Get standard date and time
-//                java.util.Date javaDate = new java.util.Date();
-//                long javaTime = javaDate.getTime();
-//                System.out.println("The Java Date is:" + javaDate.toString());
-//                //Get and display SQL TIMESTAMP
-//                Timestamp sqlTimestamp = new java.sql.Timestamp(javaTime);
-//                System.out.println("The SQL TIMESTAMP is: " + sqlTimestamp.toString());
                 //Ini dimasukkan ke Main, posisi setelah mengambil timestamp db
                 Gson gson = new Gson();
                 BufferedReader br = null;
                 try {
-                    br = new BufferedReader(new FileReader("E:\\ModulCollaborationMatrixRIN\\Coba2\\CollaborationMatrix\\src\\main\\webapp\\resources\\data\\d1ata_auth_test.json"));
+//                    br = new BufferedReader(new FileReader("..\\..\\..\\..\\webapp\\resources\\data\\data_auth.json"));
+//                    br = new BufferedReader(new FileReader("E:\\ModulCollaborationMatrixRIN\\Coba3\\CollaborationMatrix\\src\\main\\webapp\\resources\\data\\data_auth.json"));
+                    br = new BufferedReader(new FileReader("/usr/local/glassfish4/glassfish/domains/domain1/applications/dataverse-4.8.6/RIN/src/main/webapp/resources/data/data_auth.json"));
+                            
                     Result result = gson.fromJson(br, Result.class);
                     datetimejson = Timestamp.valueOf(result.getDatejson());
                     System.out.println("\n\nDate pada Database  : " + lastexportimedb);
@@ -87,14 +77,11 @@ public class MainComparisonDateTime implements Serializable {
                     boolean a = lastexportimedb.after(datetimejson); //Apakah DateTime pada lastexporttime (DB) lebih dari yg tercantum pada File .JSON ? --true : Maka lakukan pembaruan file JSON.
                     System.out.println("isAfter : " + a); //Jika true, maka jalankan Main java
                     //
-                    
+
                     if (a) {
                         InitCollaboration main = new InitCollaboration();
                         main.AuthorKeyword(lastexportimedb);
-//                        MainAffkey main1 = new MainAffkey();
-//                        main1.AffiliationKeyword(lastexportimedb);
                     }
-
 
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
@@ -103,7 +90,6 @@ public class MainComparisonDateTime implements Serializable {
                         try {
                             br.close();
                         } catch (IOException e) {
-                            // TODO Auto-generated catch block
                             e.printStackTrace();
                         }
                     }
@@ -114,13 +100,4 @@ public class MainComparisonDateTime implements Serializable {
             es.printStackTrace();
         }
     }
-    
-    
-    
-    
-//        public Date getDatenow() {
-//        Date date=new Date(lastexportimedb.getTime());  
-//        return date;
-////        return GregorianCalendar.getInstance().getTime();
-//    }
 }

@@ -14,9 +14,8 @@ import java.util.List;
  *
  * @author Kevien Aqbar
  */
-
 public class ConvertJson {
-    
+
     //Membuat string json dan Write file
     void setConvertJson(int jenis, ArrayList<String> authortampil, ArrayList<Integer> sourcelisttampil, ArrayList<Integer> targetlisttampil, ArrayList<Integer> valuelisttampil, ArrayList<String> keywordlisttampilfix) {
 
@@ -62,10 +61,12 @@ public class ConvertJson {
         FileWriter writer = null;
         try {
             if (jenis == 1) {
-//            getServletContext().getRealPath("/")
-                writer = new FileWriter("E:\\ModulCollaborationMatrixRIN\\Coba2\\CollaborationMatrix\\src\\main\\webapp\\resources\\data\\d1ata_auth_test.json");
-            }else {
-                writer = new FileWriter("E:\\ModulCollaborationMatrixRIN\\Coba2\\CollaborationMatrix\\src\\main\\webapp\\resources\\data\\d1ata_aff_test.json");
+//                getServletContext().getRealPath("/")
+//                writer = new FileWriter("E:\\ModulCollaborationMatrixRIN\\Coba3\\CollaborationMatrix\\src\\main\\webapp\\resources\\data\\data_auth.json");
+                writer = new FileWriter("/usr/local/glassfish4/glassfish/domains/domain1/applications/dataverse-4.8.6/RIN/src/main/webapp/resources/data/data_auth.json");
+            } else {
+//                writer = new FileWriter("E:\\ModulCollaborationMatrixRIN\\Coba3\\CollaborationMatrix\\src\\main\\webapp\\resources\\data\\data_aff.json");
+                writer = new FileWriter("/usr/local/glassfish4/glassfish/domains/domain1/applications/dataverse-4.8.6/RIN/src/main/webapp/resources/data/data_aff.json");
             }
 //            writer = new FileWriter("/src/main/webapp/resources/data/data_aff_test.json");
             writer.write(strJson);
@@ -80,7 +81,5 @@ public class ConvertJson {
                 }
             }
         }
-       
     }
-
 }

@@ -3,12 +3,10 @@ package com.keviena.collaborationmatrix;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-
 /**
  *
  * @author Kevien Aqbar
  */
-
 class OperationColaboration {
 
     static String keyword, arrAuthor[];
@@ -22,8 +20,6 @@ class OperationColaboration {
         this.arrCombVal = d;
         this.arrCombKey = e;
 
-        //System.out.println("setdataperjurnal : " + AuthorJurnal[1]);
-//         System.out.println("setdataperjurnal : " + KeywordJurnal);
         //Tentukan kombinasi 2 dari N (length AuthorJurnal)
         int r = 2;
         int n = arrAuthor.length;
@@ -33,10 +29,8 @@ class OperationColaboration {
     static void printCombination(String[] arrAuthor, int n, int r, ArrayList<String> arrlist, ArrayList<Integer> arrlistJml, ArrayList<String> arrlistKeyword) {
         // Sort arrAuthor secara ASC (agar Amin idx0, Budi idx1)
         Arrays.sort(arrAuthor);
-
         // Array sementara untuk menyimpan semua kombinasi satu per satu
         String data[] = new String[r]; //Panjang array data[] adalah 2, String[2]
-
         // Cetak semua kombinasi menggunakan array sementara 'data[]' 
         combinationUtil(arrAuthor, data, 0, n - 1, 0, r, arrlist, arrlistJml, arrlistKeyword); // n-1 ---> end
     }
@@ -51,7 +45,6 @@ class OperationColaboration {
             int end, int index, int r, ArrayList<String> arrComb, ArrayList<Integer> arrCombVal, ArrayList<String> arrCombKey) {
 
         String tempComb = "";
-
         // Kombinasi saat ini siap untuk dicetak, cetak
         if (index == r) { // 0 = 0
             for (int j = 0; j < r; j++) { //g ---> hasil looping Budi~~Anto, Budi~~Rina, Rina~~Anto
@@ -59,12 +52,11 @@ class OperationColaboration {
                 if (tempComb == "") {
                     tempComb = data[j];
                 } else {
-                    tempComb = tempComb + " ~ " + data[j];  
+                    tempComb = tempComb + " ~ " + data[j];
                 }
             }
 
 //            System.out.println("\nGab:" + g);
-
             //Cek jika arrlist SUDAH ADA Gabungan Kombinasi A1 ~~ A2 sebelumnya
             //Maka increment nilai arrlistJml tsb berdasarkan index yg ditemukan
             if (arrComb.contains(tempComb)) {
@@ -89,9 +81,6 @@ class OperationColaboration {
                 arrComb.add(tempComb);
                 arrCombVal.add(1);
                 //Save Add New keyword
-                //Jika ada yg sama gak usah tambah lagi
-//                if(arrlistKeyword.indexOf(KeywordJurnal) == -1){arrlistKeyword.add(KeywordJurnal);}
-   
                 arrCombKey.add(keyword);
 //                System.out.println("KEYWORD DITAMBAHKAN BARU: " + arrlistKeyword);
 //                System.out.println("Panjang deret : " + arrlist.size());

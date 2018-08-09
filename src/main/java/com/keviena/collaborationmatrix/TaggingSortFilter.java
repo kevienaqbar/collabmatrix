@@ -8,7 +8,6 @@ import java.util.List;
  *
  * @author Kevien Aqbar
  */
-
 public class TaggingSortFilter {
 
     void setData(ArrayList<String> arrComb, ArrayList<Integer> arrCombVal, ArrayList<String> arrCombKey, ArrayList<String> authortampil, ArrayList<Integer> sourcelisttampil, ArrayList<Integer> targetlisttampil, ArrayList<Integer> valuelisttampil, ArrayList<String> keywordlisttampil) {
@@ -19,9 +18,7 @@ public class TaggingSortFilter {
         }
 
         // Sort and print
-//        Collections.sort(elements); //Urutkan list elements, default ASC
-//        Collections.reverse(elements); // Membalikkan urutan, jadi yang nilai besar pertama (DESC)
-//        /* Sorting in decreasing order*/
+        //Urutkan list elements, default ASC
         Collections.sort(elements, Collections.reverseOrder());
 
         // Sublist to List
